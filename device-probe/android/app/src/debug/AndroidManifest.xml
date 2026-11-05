@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Debug builds talk to Metro on this computer. Release source does not request this. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

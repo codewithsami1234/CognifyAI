@@ -1,0 +1,27 @@
+{
+  "name": "cognify-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cognify AI offline library: local RAG tutor with a replaceable llama.rn runtime. No cloud model API.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.json && node --test dist/ai/__tests__/textChunking.test.js dist/ai/__tests__/keywordRetrieval.test.js dist/ai/__tests__/ragPipeline.test.js dist/ai/__tests__/modelRuntime.test.js dist/ai/__tests__/aiTutor.test.js dist/ai/__tests__/studyImport.test.js dist/ai/__tests__/assessmentValidation.test.js dist/ai/__tests__/assessmentGenerator.test.js dist/ai/__tests__/quizSession.test.js dist/ai/__tests__/learningProgress.test.js dist/ai/__tests__/learningCoach.test.js dist/ai/__tests__/documentLibrary.test.js dist/ai/__tests__/quizDraft.test.js dist/ai/__tests__/phase8Eval.test.js dist/ai/__tests__/semanticSearch.test.js dist/ai/__tests__/learningHistory.test.js dist/ai/__tests__/offlineStudy.test.js",
+    "inspect-model": "tsc -p tsconfig.json && node dist/ai/inspectModelCli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "llama.rn": ">=0.10.0"
+  },
+  "peerDependenciesMeta": {
+    "llama.rn": {
+      "optional": true
+    }
+  }
+}
